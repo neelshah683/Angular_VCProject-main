@@ -15,12 +15,6 @@
                       <span class="text-danger mb-0" *ngIf="firstName.invalid &&  (firstName.touched || formValid)">
                         Please Enter FirstName
                       </span>
-
-                      <label class="col-form-label">Last Name</label>
-                      <input type="text" class="form-control" formControlName="lastName" placeholder="evan" autofocus>
-                      <span class="text-danger mb-0" *ngIf="lastName.invalid &&  (lastName.touched || formValid)">
-                        Please Enter LastName
-                      </span>
                     </div>
                    
                     <div class="form-group">
@@ -51,21 +45,6 @@
                       </span>
                     </div>
                     <div class="form-group">
-                      <label class="col-form-label">Phone Number</label>
-                      <input type="tel" class="form-control" formControlName="phone" placeholder="1234567890">
-                      <span class="text-danger" *ngIf="phone.invalid && (phone.touched || formValid)">
-                            <span *ngIf="phone.errors?.['required']">
-                              Please Enter Phone Number
-                            </span>
-                            <span *ngIf="phone.errors?.['minLength']">
-                              Phone should not be less than 5 character
-                            </span>
-                            <span *ngIf="phone.errors?.['maxLength']">
-                              Phone should not be greater than 10 character
-                            </span>
-                      </span>
-                    </div>
-                    <div class="form-group">
                       <label class="col-form-label">Confirm Password</label>
                       <input type="password" class="form-control" formControlName="confirmPassword" placeholder="**********">
                       <span class="text-danger" *ngIf="confirmPassword.invalid && (confirmPassword.touched || formValid)">
@@ -79,7 +58,6 @@
                     </div>
                     <div class="d-grid mt-5">
                       <button class="btnSave" type="submit"><span class="Login">Register</span></button>
-                      <button class="btnremove" type="reset"><span class="Login">Delete</span></button>
                     </div>
     
                   </form>
